@@ -1,2 +1,2 @@
 # terminalRPG
-Very basic terminal tiled RPG game.
+Very simple terminal tiled RPG game.
