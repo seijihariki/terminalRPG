@@ -5,10 +5,10 @@
 
 # Project info
 # ===============
-# PROJECT         := # Project name (def: Default)
-# VERSION         := # Version (def: 1.0.0)
+PROJECT         := TerminalRPG
+VERSION         := 0.0.1
 # STD_NAMESPACE   := # Project namespace for C/C++
-# GIT_REMOTE_PATH := # Remote path for git repository
+GIT_REMOTE_PATH := https://github.com/seijihariki/terminalRPG.git
 # MAINTAINER_NAME := # Your name
 # MAINTAINER_MAIL := # your_name@mail.com
 # COPYRIGHT       := # Copyright Holder
@@ -39,11 +39,11 @@
 # CPPFLAGS        := # Precompiler Flags
 # ASFLAGS         := # Assembly Flags
 # CFLAGS          := # C Flags
-# CXXFLAGS        := # C++ Flags
+CXXFLAGS        := -std=c++14 -Wall -Wextra -Wpedantic -O2
 # LDFLAGS         := # Linker flags
 
 # Makeball list
 # ===============
 # 'include conf/makeball.mk' for pre-configured options
 # to use the library 'makeball'
-
+include conf/googletest.mk
