@@ -29,6 +29,6 @@ namespace math
 }
 
 // Template implementations
-#include "math.ipp"
+//#include "math.ipp"
 
 #endif
