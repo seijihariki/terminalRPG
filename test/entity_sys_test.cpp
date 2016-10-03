@@ -13,32 +13,32 @@ using ::testing::Eq;
 /*----------------------------------------------------------------------------*/
 /*                                SIMPLE TESTS                                */
 /*----------------------------------------------------------------------------*/
+using namespace game;
+
+class test_ent : public Entity
+{
+public:
+    test_ent(EntitySystem &_entitySystem, int _num)
+        : Entity(_entitySystem), number(_num)
+    {
+    }
+
+public:
+    void update(std::chrono::duration<double> dt)
+    {
+        number++;
+    }
+
+    int getNumber()
+    {
+        return number;
+    }
+
+private:
+    int number;
+};
 
 TEST(EntitySystem, EntitySystemRunningProperly) {
-    using namespace game;
-
-    class test_ent : public Entity
-    {
-    public:
-        test_ent(EntitySystem &_entitySystem, int _num)
-            : Entity(_entitySystem), number(_num)
-        {
-        }
-
-    public:
-        void update(std::chrono::duration<double> dt)
-        {
-            number++;
-        }
-
-        int getNumber()
-        {
-            return number;
-        }
-
-    private:
-        int number;
-    };
 
     EntitySystem ent_system("Test Entity System");
 
