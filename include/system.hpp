@@ -13,6 +13,7 @@ namespace game
     {
     public:
         System(std::string name);
+        ~System();
     
     public:
         virtual void run() = 0;

@@ -21,6 +21,11 @@ namespace game
         log(INFO, "System initiated.");
     }
 
+    System::~System()
+    {
+        log(INFO, "System destroyed.");
+    }
+
     void System::log(l_type type, std::string message)
     {
         switch(type)
@@ -54,6 +59,6 @@ namespace game
 
     void System::log_color(int color)
     {
-        printf("\\e[%d;1m", color);
+        printf("\e[%d;1m", color);
     }
 }
